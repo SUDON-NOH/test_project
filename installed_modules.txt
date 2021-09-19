@@ -1,0 +1,44 @@
+### INSTALL MODULE
+
+## django-cors-headers
+# Adding CORS headers allow your resources to be accessed on other domains. 
+*** It's important you understand the implications before adding the headers,
+*** since you could be unintentionally opening up your site's private data to others.
+pip install django-cors-headers
+
+## django-extensions
+# Django Extensions is a collection of custom extensions for the Django Framework
+# These include management commands, additional database fields, admin extensions and much more.
+pip install django-extensions
+
+## REST framework JWT Auth
+# This package provides JSON Web Token Authentication support for Django REST framework.
+*** Unlike some more typical uses of JWTs, this module only generates authentication tokens 
+*** that will verify the user who is requesting one of your DRF protected API resources.
+*** The actual request parameters themselves are not included in the JWT claims which means
+*** they are not signed and may be tampered with. You should only expose your API endpoints
+*** over SSL/TLS to protect against content tampering and certain kinds of replay attacks.
+pip install djangorestframework-jwt
+
+## django-allauth
+# Generally use allauth for social login like naver, facebook, kakao, google
+# Supports multiple authentication schemes (e.g. login by user name, or by e-mail), 
+# as well as multiple strategies for account verification (ranging from none to e-mail verification).
+# All access tokens are consistently stored so that you can publish wall updates etc.
+pip install django-allauth
+
+## django-rest-auth
+# rest_auth has basic auth functionality like login, logout, password, reset and password change
+# reset_auth.registration has logic related with registration and social media authentication
+  - User Registration with activation
+  - Login/Logout
+  - Retrieve/Update the Django User model
+  - Password change
+  - Password reset via e-mail
+  - Social Media authentication
+pip install django-rest-auth
+
+### settings.py
+## rest_framework.authtoken
+# To use the TokenAuthentication scheme scheme you'll need to configure the authentication classes
+# to include TokenAuthentication, and additionally include rest_framework.authtoken in your INSTALLED_APPS setting
